@@ -1,0 +1,27 @@
+logging:
+  level:
+    laza.faktura: INFO
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin
+      role: EXAMPLE
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  data:
+    mongodb:
+      auto-index-creation: true
+      #uri: mongodb://localhost:27017/laser_measurements_store?serverSelectionTimeoutMS=2000
+      database: faktura
+      host: localhost
+      port: 27017
+      #username: ${MONGO_USER}
+      #password: ${MONGO_PWD}
+      authentication-database: admin
+      client:
+        server-selection-timeout: 2s
